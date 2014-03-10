@@ -13,6 +13,7 @@ class KeyValue
 
   def delete_key(key)
     @hash.delete(key)
+    nil
   end
 
   def get_keys
@@ -37,6 +38,7 @@ steve.add_key_value("test", "t")
 steve.get_keys
 
 steve.delete_key("Hi")
+steve.get_key_value("Hi")
 
 steve.get_keys
 steve.clear_store

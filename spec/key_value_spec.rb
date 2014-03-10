@@ -11,6 +11,12 @@ describe KeyValue do
     expect("Value").to eq(test.get_key_value("Key"))
   end
 
-  it "can "
+  it "can delete a key and then return nil" do
+    test = KeyValue.new
+    test.add_key_value("Key", "Value")
+    returned = test.delete_key("Key")
+
+    expect(nil).to eq(returned)
+  end
 
 end

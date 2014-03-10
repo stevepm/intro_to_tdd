@@ -20,6 +20,14 @@ describe KeyValue do
     expect(nil).to eq(returned)
   end
 
-  
+  it "can return a list of all keys for the store" do
+    test = KeyValue.new
+    test.add_key_value("1", "hi")
+    test.add_key_value("2", "hi")
+    test.add_key_value("3", "hi")
+    test.add_key_value("4", "hi")
+
+    expect(["1","2","3","4"]).to eq(test.get_keys)
+  end
 
 end

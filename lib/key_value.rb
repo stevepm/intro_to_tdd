@@ -16,9 +16,11 @@ class KeyValue
   end
 
   def get_keys
+    keys = []
     @hash.each do |key, _|
-      puts key
+      keys << key
     end
+    keys
   end
 
   def clear_store
@@ -34,7 +36,7 @@ steve.add_key_value("Hi", "yes")
 steve.add_key_value("bye", "no")
 steve.add_key_value("test", "t")
 
-steve.get_keys
+puts steve.get_keys
 
 steve.delete_key("Hi")
 steve.get_key_value("Hi")

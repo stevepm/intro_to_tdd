@@ -23,4 +23,12 @@ describe "Calculator" do
 
     expect(6).to eq(test.get)
   end
+
+  it "should clear the saved number" do
+    test = Calc.new
+    test.save(test.add(1,5))
+    test.clear
+
+    expect(0).to eq(test.get)
+  end
 end

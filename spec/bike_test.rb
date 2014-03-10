@@ -25,14 +25,8 @@ class TestBike < Minitest::Test
     # instantiate bike class
     bike = Bike.new("red")
 
-    # expected value
-    expected_value = true
-
-    # actual value
-    actual_value = bike.is_cool?
-
     # see if the expected color matches the actual color
-    assert_equal(expected_value, actual_value)
+    assert(bike.is_cool?)
   end
 
 
@@ -41,13 +35,6 @@ class TestBike < Minitest::Test
     # instantiate bike class
     bike = Bike.new("blue")
 
-    # expected value
-    expected_value = false
-
-    # actual value
-    actual_value = bike.is_cool?
-
-    # see if the expected color matches the actual color
-    assert_equal(expected_value, actual_value)
+    assert(!bike.is_cool?)
   end
 end

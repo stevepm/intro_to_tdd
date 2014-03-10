@@ -1,6 +1,6 @@
 class KeyValue
   def initialize
-    @hash = Hash.new
+    @hash = Hash.new(nil)
   end
 
   def add_key_value(key, value)
@@ -13,7 +13,6 @@ class KeyValue
 
   def delete_key(key)
     @hash.delete(key)
-    nil
   end
 
   def get_keys

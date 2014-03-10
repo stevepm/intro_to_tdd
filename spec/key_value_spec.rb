@@ -14,9 +14,12 @@ describe KeyValue do
   it "can delete a key and then return nil" do
     test = KeyValue.new
     test.add_key_value("Key", "Value")
-    returned = test.delete_key("Key")
+    test.delete_key("Key")
+    returned = test.get_key_value("Key")
 
     expect(nil).to eq(returned)
   end
+
+  
 
 end

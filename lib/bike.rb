@@ -8,4 +8,8 @@ class Bike
     @color
   end
 
+  def is_cool?
+    color == "red"
+  end
+
 end

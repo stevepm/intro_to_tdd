@@ -11,9 +11,10 @@ describe Bike do
     # expected value
     expected_color = "red"
 
-    # actual value
+    # actual value. Do this by calling a method
     actual_color = bike.color
 
+    # see if the expected color matches the actual color
     expect(expected_color).to eq actual_color
   end
 
@@ -21,7 +22,7 @@ describe Bike do
     # instantiate bike class
     bike = Bike.new("red")
 
-    # see if the expected color matches the actual color
+    # Check if bike is actually cool
     expect(bike.is_cool?).to eq(true)
   end
 
@@ -29,6 +30,7 @@ describe Bike do
     # instantiate bike class
     bike = Bike.new("blue")
 
+    # Check if bike is not cool
     expect(bike.is_cool?).to eq(false)
   end
 

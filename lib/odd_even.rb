@@ -4,8 +4,19 @@ class OddEven
   end
 
   def run
-    (1..@num).to_a
+    numbers = (1..@num).to_a
+    numbers.each do |num|
+      if num%2 == 0
+        numbers[num-1] = "Even"
+      else
+        numbers[num-1] = "Odd"
+      end
+    end
+    numbers
   end
 
 
 end
+
+test = OddEven.new(5)
+print test.run

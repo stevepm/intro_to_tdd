@@ -4,9 +4,9 @@ require 'rspec/core'
 require 'odd_even'
 
 describe "Odd Even" do
-  it "will display all values from 1 to number entered when i call run" do
+  it "turn all even numbers into the word even and all odd numbers into the word odd" do
     test = OddEven.new(10)
 
-    expect([1,2,3,4,5,6,7,8,9,10]).to eq(test.run)
+    expect(["Odd","Even","Odd","Even","Odd","Even","Odd","Even","Odd","Even"]).to eq(test.run)
   end
 end

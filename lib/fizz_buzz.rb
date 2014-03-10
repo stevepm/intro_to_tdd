@@ -16,7 +16,29 @@ class FizzBuzz
     end
     @array
   end
+
+  def buzz
+    @array.each do |number|
+      if number%5 == 0
+        @array[number-1] = "Buzz"
+      end
+    end
+    @array
+  end
+
+  def fizz_buzz
+    @array.each do |number|
+      if number%3 == 0 && number%5 == 0
+        @array[number-1] = "FizzBuzz"
+      elsif number%3 == 0
+        @array[number-1] = "Fizz"
+      elsif number%5 == 0
+        @array[number-1] = "Buzz"
+      end
+    end
+    @array
+  end
 end
 
-test = FizzBuzz.new(10)
-puts test.fizz
+test = FizzBuzz.new(50)
+puts test.fizz_buzz

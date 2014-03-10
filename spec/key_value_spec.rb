@@ -30,4 +30,15 @@ describe KeyValue do
     expect(["1","2","3","4"]).to eq(test.get_keys)
   end
 
+  it "can clear all keys from the store" do
+    test = KeyValue.new
+    test.add_key_value("1", "hi")
+    test.add_key_value("2", "hi")
+    test.add_key_value("3", "hi")
+    test.add_key_value("4", "hi")
+    test.clear_store
+
+    expect(test.get_keys).to eq([])
+  end
+
 end

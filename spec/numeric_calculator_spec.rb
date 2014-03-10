@@ -9,4 +9,10 @@ describe "Calculator" do
 
     expect(10).to eq(test.add(4,6))
   end
+
+  it "should subtract two numbers" do
+    test = Calc.new
+
+    expect(5).to eq(test.subtract(10,5))
+  end
 end

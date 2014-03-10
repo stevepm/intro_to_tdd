@@ -1,9 +1,10 @@
 $LOAD_PATH.unshift(File.expand_path('lib'), __FILE__)
 
 require 'bike'
+require 'minitest/autorun'
 
-describe "test_ask_bike_for_color" do
-  it "Returns red" do
+class TestBike < Minitest::Test
+  def test_ask_bike_for_color
 
     # instantiate bike class
     bike = Bike.new("red")
@@ -14,18 +15,12 @@ describe "test_ask_bike_for_color" do
     # actual value
     actual_color = bike.color
 
-    # see if the expected color matches the actual color
-    if actual_color == expected_color
-      print '.'
-    else
-      raise "Test failed"
+    assert_equal(expected_color, actual_color)
+
     end
-  end
 
-end
 
-describe "test_red_bikes_are_cool" do
-  it "it's cool" do
+  def test_red_bikes_are_cool
 
     # instantiate bike class
     bike = Bike.new("red")
@@ -37,17 +32,11 @@ describe "test_red_bikes_are_cool" do
     actual_value = bike.is_cool?
 
     # see if the expected color matches the actual color
-    if actual_value == expected_value
-      print '.'
-    else
-      raise "Test failed"
-    end
+    assert_equal(expected_value, actual_value)
   end
 
-end
 
-describe "test_blue_bikes_are_not cool" do
-  it "it's not cool" do
+  def test_blue_bikes_are_not_cool
 
     # instantiate bike class
     bike = Bike.new("blue")
@@ -59,11 +48,6 @@ describe "test_blue_bikes_are_not cool" do
     actual_value = bike.is_cool?
 
     # see if the expected color matches the actual color
-    if actual_value == expected_value
-      print '.'
-    else
-      raise "Test failed"
-    end
+    assert_equal(expected_value, actual_value)
   end
-
 end

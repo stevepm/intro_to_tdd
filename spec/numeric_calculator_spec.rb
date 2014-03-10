@@ -15,4 +15,12 @@ describe "Calculator" do
 
     expect(5).to eq(test.subtract(10,5))
   end
+
+  it "should save and retrieve a number" do
+    test = Calc.new
+    test.save(test.add(1,5))
+
+
+    expect(6).to eq(test.get)
+  end
 end

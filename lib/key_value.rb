@@ -29,18 +29,3 @@ class KeyValue
     end
   end
 end
-
-steve = KeyValue.new
-steve.add_key_value("Hi", "Bye")
-steve.add_key_value("Hi", "yes")
-steve.add_key_value("bye", "no")
-steve.add_key_value("test", "t")
-
-puts steve.get_keys
-
-steve.delete_key("Hi")
-steve.get_key_value("Hi")
-
-steve.get_keys
-steve.clear_store
-steve.get_keys

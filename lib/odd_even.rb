@@ -17,6 +17,3 @@ class OddEven
 
 
 end
-
-test = OddEven.new(5)
-print test.run

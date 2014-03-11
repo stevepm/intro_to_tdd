@@ -39,6 +39,3 @@ class FizzBuzz
     @array
   end
 end
-
-test = FizzBuzz.new(50)
-puts test.fizz_buzz

@@ -1,6 +1,6 @@
 class Calc
   def initialize
-    @saved = 0
+    @saved = nil
   end
 
   def add(num1, num2)
@@ -20,7 +20,7 @@ class Calc
   end
 
   def clear
-    @saved = 0
+    @saved = nil
   end
 
 end

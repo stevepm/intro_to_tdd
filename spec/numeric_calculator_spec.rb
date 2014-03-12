@@ -29,6 +29,6 @@ describe "Calculator" do
     test.save(test.add(1,5))
     test.clear
 
-    expect(0).to eq(test.get)
+    expect(test.get).to eq(nil)
   end
 end
